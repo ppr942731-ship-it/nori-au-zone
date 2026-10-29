@@ -23,7 +23,7 @@ body {
     background:#ffe873;
     padding:18px;
     transform: rotate(-1deg);
-    margin-bottom:30px;
+    margin-bottom:20px;
     border:2px dashed #333;
 }
 .note-header h1 {
@@ -40,10 +40,26 @@ body {
     border:2px solid #222;
     border-radius:8px;
 }
+/* ✅ STYLE DISCLAIMER BARU */
+.disclaimer-box {
+    background:#ffe6e6;
+    border:2px dashed #d63031;
+    padding:15px;
+    margin-bottom:25px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:600;
+}
+/* Grid 2 kotak per baris (HP jadi 1) */
 .grid-cards {
     display:grid;
-    grid-template-columns: repeat(auto-fill, 320px);
+    grid-template-columns: repeat(2, 1fr);
     gap:25px;
+}
+@media (max-width:768px) {
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
 }
 .paper-card {
     background:#ffffff;
@@ -76,6 +92,14 @@ body {
     font-size:14px;
     background:#eef;
     padding:6px;
+    font-weight:600;
+}
+.cr {
+    margin:10px 0;
+    font-size:14px;
+    background:#fff5d7;
+    padding:7px;
+    border-radius:6px;
     font-weight:600;
 }
 .tag {
