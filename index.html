@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✅ Ikon Huruf N untuk pintasan browser (tanpa manifest!) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Nori AU Zone">
+    <meta name="theme-color" content="#ffe873">
     <title>Nori AU Zone 📓</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,9 +28,38 @@
             </div>
         </header>
 
-        <!-- ✅ DISCLAIMER BARU ARPI!!! -->
+        <!-- ✅ Disclaimer -->
         <div class="disclaimer-box">
             <p><strong>⚠️ Disclaimer:</strong> Nori AU Zone adalah membagikan web AU yang lewat di TikTok, jika link/pw (sandi) tidak bisa itu bukan salah Nori, karena itu di luar kendali kami</p>
+        </div>
+
+        <!-- ✅ FAQ BUKA‑TUTUP BARU!!! -->
+        <div class="faq-container">
+            <h2>❓ FAQ - Pertanyaan Sering Ditanya</h2>
+            <div class="faq-item">
+                <button class="faq-btn">🔑 Kenapa password / link tidak berfungsi?</button>
+                <div class="faq-content">
+                    <p>Link dan password diambil dari TikTok/X, pembuat bisa mengubah atau menghapusnya kapan saja — ini di luar kendali Nori AU Zone!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">📥 Dari mana kita dapat web AU ini?</button>
+                <div class="faq-content">
+                    <p>Kami mencari dan mengumpulkan dari kolom komentar & postingan TikTok; kalau ada larangan dari author kami akan segera menghapusnya!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">👤 Kenapa ada author yang tertulis Unknown / Tidak Dapat Disebarkan?</button>
+                <div class="faq-content">
+                    <p>Kalau tidak ketemu nama pembuat atau author minta tidak dibagikan namanya, kami isi sesuai kondisi tersebut untuk menghormati mereka!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">📱 Bagaimana cara tambah ke layar utama HP?</button>
+                <div class="faq-content">
+                    <p>Buka situs di Chrome/Safari HP → tekan menu tiga titik → pilih "Tambah ke Layar Utama" (tidak semua HP punya opsi ini ya Arpi!)</p>
+                </div>
+            </div>
         </div>
 
         <div id="daftarAU" class="grid-cards">
@@ -34,6 +68,7 @@
     </div>
 
     <script>
+        // Load daftar AU
         async function loadData() {
             const res = await fetch("data.json");
             const data = await res.json();
@@ -61,6 +96,14 @@
         }
         document.getElementById("filterTema").addEventListener("change", () => loadData());
         loadData();
+
+        // Skrip FAQ buka tutup
+        document.querySelectorAll(".faq-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
     </script>
 </body>
 </html>
