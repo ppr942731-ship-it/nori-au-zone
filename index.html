@@ -18,9 +18,16 @@
                     <option value="lucu">😂 Lucu & Kocak</option>
                     <option value="romantis">💌 Romantis</option>
                     <option value="misteri">🕵️ Misteri Teka‑teki</option>
+                    <option value="lainlain">📦 Lain‑lain</option>
                 </select>
             </div>
         </header>
+
+        <!-- ✅ DISCLAIMER BARU ARPI!!! -->
+        <div class="disclaimer-box">
+            <p><strong>⚠️ Disclaimer:</strong> Nori AU Zone adalah membagikan web AU yang lewat di TikTok, jika link/pw (sandi) tidak bisa itu bukan salah Nori, karena itu di luar kendali kami</p>
+        </div>
+
         <div id="daftarAU" class="grid-cards">
             <!-- Kartu akan dimuat dari JSON -->
         </div>
@@ -45,6 +52,7 @@
                     <h3>${item.nama}</h3>
                     <p class="desc">${item.deskripsi}</p>
                     <p class="pw">🔑 Password: <span>${item.password}</span></p>
+                    <p class="cr">💛 CR / Author: <span>${item.author}</span></p>
                     <span class="tag">${item.tema}</span>
                     <a href="${item.link}" target="_blank" class="btn-buka">🌐 Buka Situs AU</a>
                 `;
