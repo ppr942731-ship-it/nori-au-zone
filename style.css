@@ -40,7 +40,7 @@ body {
     border:2px solid #222;
     border-radius:8px;
 }
-/* ✅ STYLE DISCLAIMER BARU */
+/* Disclaimer */
 .disclaimer-box {
     background:#ffe6e6;
     border:2px dashed #d63031;
@@ -49,6 +49,40 @@ body {
     border-radius:10px;
     text-align:center;
     font-weight:600;
+}
+/* ✅ STYLE FAQ BARU */
+.faq-container {
+    background:#ffffff;
+    padding:20px;
+    margin-bottom:30px;
+    border:1px solid #d8d2c9;
+    box-shadow:3px 3px 8px rgba(0,0,0,0.12);
+}
+.faq-container h2 {
+    text-align:center;
+    font-weight:800;
+    margin-bottom:15px;
+}
+.faq-item {
+    margin:10px 0;
+}
+.faq-btn {
+    width:100%;
+    padding:12px;
+    background:#ffe873;
+    border:2px solid #222;
+    border-radius:8px;
+    font-weight:700;
+    text-align:left;
+    cursor:pointer;
+}
+.faq-content {
+    display:none;
+    padding:12px;
+    background:#f7f3e9;
+    border:1px solid #d8d2c9;
+    border-radius:8px;
+    margin-top:5px;
 }
 /* Grid 2 kotak per baris (HP jadi 1) */
 .grid-cards {
