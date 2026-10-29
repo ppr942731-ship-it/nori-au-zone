@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "AU Rumah Aili",
+    "deskripsi": "Masuk ke hp Aili dan temukan rahasia tersembunyi",
+    "password": "aili123",
+    "link": "https://link-au-contoh.com",
+    "tema": "horor"
+  },
+  {
+    "nama": "AU Chat Lucu Wonbin",
+    "deskripsi": "Chat palsu bareng Wonbin yang bikin ngakak",
+    "password": "-",
+    "link": "https://link-au-contoh2.com",
+    "tema": "lucu"
+  },
+  {
+    "nama": "AU Surat Romantis",
+    "deskripsi": "Cerita manis yang bikin meleleh",
+    "password": "love01",
+    "link": "https://link-au-contoh3.com",
+    "tema": "romantis"
+  }
+]
