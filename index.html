@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nori AU Zone 📓</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notebook-container">
+        <header class="note-header">
+            <h1>📌 Nori AU Zone</h1>
+            <p>Arsip rahasia web AU yang ditemukan di TikTok 🤫</p>
+            <div class="filter-box">
+                <select id="filterTema">
+                    <option value="semua">Semua Tema</option>
+                    <option value="horor">👻 Horor Misteri</option>
+                    <option value="lucu">😂 Lucu & Kocak</option>
+                    <option value="romantis">💌 Romantis</option>
+                    <option value="misteri">🕵️ Misteri Teka‑teki</option>
+                </select>
+            </div>
+        </header>
+        <div id="daftarAU" class="grid-cards">
+            <!-- Kartu akan dimuat dari JSON -->
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            const res = await fetch("data.json");
+            const data = await res.json();
+            renderData(data);
+        }
+        function renderData(items) {
+            const filter = document.getElementById("filterTema").value;
+            const container = document.getElementById("daftarAU");
+            container.innerHTML = "";
+            const filtered = filter === "semua" ? items : items.filter(i => i.tema === filter);
+            filtered.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "paper-card";
+                card.innerHTML = `
+                    <div class="tape-top"></div>
+                    <h3>${item.nama}</h3>
+                    <p class="desc">${item.deskripsi}</p>
+                    <p class="pw">🔑 Password: <span>${item.password}</span></p>
+                    <span class="tag">${item.tema}</span>
+                    <a href="${item.link}" target="_blank" class="btn-buka">🌐 Buka Situs AU</a>
+                `;
+                container.appendChild(card);
+            });
+        }
+        document.getElementById("filterTema").addEventListener("change", () => loadData());
+        loadData();
+    </script>
+</body>
+</html>
