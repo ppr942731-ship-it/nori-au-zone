@@ -7,28 +7,12 @@
   "tema": "horor",
   "author": "@mahaevillage"
  }, 
-  {
-    "nama": "AU Chat Lucu Wonbin",
-    "deskripsi": "Chat palsu bareng Wonbin yang bikin ngakak",
-    "password": "-",
-    "link": "https://link-au-contoh2.com",
-    "tema": "lucu",
-    "author": "Unknown"
-  },
-  {
-    "nama": "AU Surat Romantis",
-    "deskripsi": "Cerita manis yang bikin meleleh",
-    "password": "love01",
-    "link": "https://link-au-contoh3.com",
-    "tema": "romantis",
-    "author": "@creator_au_tiktok"
-  },
-  {
-    "nama": "AU Lain‑lain Contoh",
-    "deskripsi": "Web AU yang tidak masuk ke kategori lain",
-    "password": "-",
-    "link": "https://link-au-contoh4.com",
-    "tema": "lainlain",
-    "author": "Unknown"
-  }
+{
+  "nama": "AU Minwon",
+  "deskripsi": "Web AU yang ditemukan dari kolom komentar TikTok, cerita belum diketahui secara lengkap",
+  "password": "1796",
+  "link": "https://shadeofskye.github.io/minwon/",
+  "tema": "lainlain",
+  "author": "Unknown"
+}
 ]
